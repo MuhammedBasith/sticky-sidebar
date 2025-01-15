@@ -1,33 +1,116 @@
+/* Reset and basic styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+    padding: 30px;
+}
+
+
+/* Wrapper for Flex Layout */
+
 .wrapper {
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Main content styling */
+
+.main {
+    flex: 3;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 350vh;
+}
+
+.main h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.main p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* Sidebar Styling */
+
+.sidebar {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+    height: 25vh;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar li:hover {
+    color: #007BFF;
+}
+
+
+/* Background & Borders */
+
+body {
+    background-color: #f4f4f4;
+}
+
+.wrapper {
+    gap: 20px;
 }
 
 .main,
 .sidebar {
-    border: 3px solid black;
-    padding: 15px;
-    background-color: #fff;
+    border-radius: 10px;
 }
 
-.main {
-    width: 60%;
-    height: 350vh;
+
+/* Styling for Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-.sidebar {
-    width: 25%;
-    height: 25vh;
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
 }
 
-body {
-    background-color: #ccc;
-    font-family: sans-serif;
-    padding: 10px;
-}
-
-.sidebar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
 }
